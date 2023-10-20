@@ -1,0 +1,383 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+html {
+scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    min-width:320px;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+
+.main-container .logo {
+    width:40%;
+    padding: 10px 0;
+}
+
+/****** Header ******/
+header{
+    display: flex!important;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li:first-child {
+ margin-right:50px;
+}
+
+header nav ul li:hover {
+    border-top: 3px solid var(--main-color);
+    color:var(--main-color);
+    padding-top:10px;
+}
+
+/****** First section ******/
+.first-section {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top:25px;
+}
+
+/****** Catch phrase ******/
+.catch-phrase h1 {
+    margin-bottom:0;
+}
+.catch-phrase p {
+    margin: 5px 0 0 0;
+}
+
+/****** Search bar ******/
+form.search-bar  {
+ display:flex;
+}
+
+form.search-bar input[type=text], form.search-bar .location,form.search-bar button[type=submit] {
+    border: 1px solid var(--main-bg-color);
+}
+
+form.search-bar input[type=text] {
+    font-size: 17px;
+    font-weight:900;
+    background: white;
+    text-align: center;
+  }
+
+form.search-bar i {
+    color:black;
+    font-size:1.5em;
+}
+
+form.search-bar .location {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--main-bg-color);
+    padding:20px;
+}
+
+form.search-bar button[type=submit] {
+    padding: 0 20px;
+    font-size: 17px;
+    font-weight:600;
+    background-color: var(--main-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--main-bg-color);
+    border-left: none;
+  }
+
+/****** Filter ******/
+.filter-section {
+    display:flex;
+}
+
+.filter-section .filter-container {
+    margin: 0 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-section p, .filter-section .filter{
+    font-size: 17px;
+    font-weight:600;
+}
+
+.filter-section .filter {
+    padding: 10px 20px;
+    background: var(---bg-color);
+    border-radius: 26px;
+    border: 2px solid var(--main-bg-color);
+}
+
+.filter-section .filter:hover {
+    background: var(--filter-bg-color);
+}
+
+.filter-section .filter i {
+    padding-right:10px;
+}
+/****** Infos ******/
+.infos {
+    display : flex;
+    gap: 7px;
+    margin:25px 0;
+}
+.infos span {
+    margin : auto 5px;
+}
+.infos .fa-border {
+   border-radius: 50%;
+   padding: 5px 9px;
+  }
+
+/****** Hebergements et populaires ******/
+.hebergements-and-populaires {
+    display : flex;
+    justify-content: space-between;
+   
+    
+}
+
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+   flex-direction: column-reverse;
+       
+    }
+}
+
+@media (max-width: 767px) {
+    .hebergements-and-populaires {
+   flex-direction: column-reverse;
+       
+    }
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+   
+}
+@media (max-width: 1024px) {
+    .hebergements-and-populaires section {
+        width:auto;
+    }
+}
+
+
+
+/****** Hebergements ******/
+.hebergements {
+    width: 65%;
+}
+
+.hebergements-grids {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin:33px 0;
+  }
+
+.hebergements-grids img {
+    width: 100%;
+    height: 122px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.hebergements-grids article .grid-content{
+  padding:6px;
+}
+.hebergements-grids article .grid-content .grid-title {
+    margin:0;
+}
+.hebergements-grids article .grid-content .grid-subtitle {
+ margin: 5px 0;
+}
+
+.hebergements .grid-rating {
+   font-size: 18px;
+}
+.hebergements .afficher-plus{
+    margin-bottom:0;
+    font-weight: bolder;
+    font-size:1.1em;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-grids .grid {
+  display: flex;
+  margin-top:33px;
+}
+
+.populaires-grids img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+}
+
+.populaires-grids .grid-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-grids .grid-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-grids .grid-subtitle {
+    margin: 0;
+}
+
+/****** Activites à Marseille ***********/
+.activites-marseille {
+    padding: 30px;
+    box-sizing: border-box;
+    margin:30px 0;
+}
+
+.activites-grid {
+    margin-top:33px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:30px;
+    padding: 5px 20px;
+}
+
+.activites-grid .grid {
+    display:flex;
+    flex-direction: column;
+    padding:0;
+}
+
+.activites-grid img {
+    width:100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.activites-grid .grid-title {
+    padding-left:15px;
+}
+
+/****** Footer ***********/
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+footer .footer-content {
+    flex:1;
+    padding-left: 20px;
+}
+
+footer h3 {
+    margin-bottom : 0;
+}
+footer ul {
+    margin-top:0;
+    padding-left:0;
+}
+footer ul li {
+    margin: 10px 0;
+}
+
+/****** Common styles ***********/
+.catch-phrase, .search-bar {
+    margin-bottom: 25px;
+}
+
+.section-title , .catch-phrase h1{
+    margin: 0;
+    font-size: 22px;
+}
+
+.grid-title {
+    font-size: 16px;
+}
+
+.grid-subtitle {
+    font-size:15px;
+}
+
+.grid {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+
+/****** Media queries ******/
+
+/* Tablets */
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+}
+
+
+
+
