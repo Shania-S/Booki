@@ -7,6 +7,7 @@
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
+
 html {
 scroll-behavior: smooth;
 }
@@ -25,15 +26,15 @@ body {
     padding: 0 50px;
 }
 
-.main-container .logo {
-    width:40%;
-    padding: 10px 0;
-}
-
 /****** Header ******/
 header{
     display: flex!important;
     justify-content: space-between;
+}
+
+header .logo {
+    width:40%;
+    padding: 10px 0;
 }
 
 header nav ul li {
@@ -50,18 +51,18 @@ header nav ul li:hover {
     padding-top:10px;
 }
 
-/****** First section ******/
-.first-section {
+/****** Top section ******/
+.top-section {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top:25px;
 }
 
-/****** Catch phrase ******/
 .catch-phrase h1 {
     margin-bottom:0;
 }
+
 .catch-phrase p {
     margin: 5px 0 0 0;
 }
@@ -168,6 +169,7 @@ form.search-bar button[type=submit] {
     display : flex;
     justify-content: space-between;
 }
+
 /*Tablet device*/
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
@@ -178,7 +180,6 @@ form.search-bar button[type=submit] {
 @media (max-width: 767px) {
     .hebergements-and-populaires {
    flex-direction: column-reverse;
-       
     }
 }
 
