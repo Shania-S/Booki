@@ -22,6 +22,7 @@ body {
     min-width:320px;
     max-width: 1440px;
     box-sizing: border-box;
+    padding: 0 50px;
 }
 
 .main-container .logo {
@@ -68,6 +69,7 @@ header nav ul li:hover {
 /****** Search bar ******/
 form.search-bar  {
  display:flex;
+ height:50px;
 }
 
 form.search-bar input[type=text], form.search-bar .location,form.search-bar button[type=submit] {
@@ -87,10 +89,10 @@ form.search-bar i {
 }
 
 form.search-bar .location {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     background-color: var(--main-bg-color);
-    padding:20px;
+    padding:2px 20px;
 }
 
 form.search-bar button[type=submit] {
@@ -98,8 +100,8 @@ form.search-bar button[type=submit] {
     font-size: 17px;
     font-weight:600;
     background-color: var(--main-color);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     color: var(--main-bg-color);
     border-left: none;
   }
@@ -108,11 +110,24 @@ form.search-bar button[type=submit] {
 .filter-section {
     display:flex;
 }
+/*Tablet device*/
+@media (max-width: 1024px) {
+    .filter-section {
+   flex-direction: column;
+    }
+}
 
 .filter-section .filter-container {
     margin: 0 10px;
     display: flex;
     gap: 10px;
+}
+
+/*Tablet device*/
+@media (max-width: 1024px) {
+    .filter-section .filter-container{
+   margin:0;
+    }
 }
 
 .filter-section p, .filter-section .filter{
@@ -152,14 +167,11 @@ form.search-bar button[type=submit] {
 .hebergements-and-populaires {
     display : flex;
     justify-content: space-between;
-   
-    
 }
-
+/*Tablet device*/
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
-   flex-direction: column-reverse;
-       
+     flex-direction: column;
     }
 }
 
@@ -177,17 +189,17 @@ form.search-bar button[type=submit] {
     box-sizing: border-box;
    
 }
-@media (max-width: 1024px) {
-    .hebergements-and-populaires section {
-        width:auto;
-    }
-}
-
 
 
 /****** Hebergements ******/
 .hebergements {
     width: 65%;
+}
+
+@media (max-width: 1024px) {
+    .hebergements {
+        width:100%;
+    }
 }
 
 .hebergements-grids {
@@ -228,6 +240,13 @@ form.search-bar button[type=submit] {
 .populaires {
     width: 32%;
 }
+/* Tablet device*/
+@media (max-width: 1024px) {
+    .populaires {
+       width:100%;
+       margin-top:32px;
+    }
+}
 
 .populaires-title {
     display: flex;
@@ -235,10 +254,14 @@ form.search-bar button[type=submit] {
     align-items: center;
 }
 
+.populaires-grids {
+    margin-top: 33px;
+}
+
 .populaires-grids .grid {
   display: flex;
-  margin-top:33px;
 }
+
 
 .populaires-grids img {
     width: 33%;
@@ -276,16 +299,20 @@ form.search-bar button[type=submit] {
 .activites-grid {
     margin-top:33px;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
     gap:30px;
-    padding: 5px 20px;
+    padding: 5px 0;
 }
 
 .activites-grid .grid {
     display:flex;
     flex-direction: column;
     padding:0;
+    height: 100%;
 }
+
+
 
 .activites-grid img {
     width:100%;
@@ -295,9 +322,20 @@ form.search-bar button[type=submit] {
     object-fit: cover;
 }
 
-.activites-grid .grid-title {
-    padding-left:15px;
+/* Tablet device*/
+@media (max-width: 1024px) {
+    .activites-grid img{
+       height: 200px;
+    }
 }
+
+.activites-grid .grid-title {
+    padding:15px;
+    margin:auto 0;
+}
+
+
+
 
 /****** Footer ***********/
 footer {
@@ -322,6 +360,18 @@ footer ul li {
 }
 
 /****** Common styles ***********/
+.hebergements-grids, .populaires-grids {
+    display: grid;
+    gap: 30px;
+}
+/*Tablet device*/
+@media (max-width: 1024px) {
+    .populaires-grids {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
 .catch-phrase, .search-bar {
     margin-bottom: 25px;
 }
@@ -367,10 +417,6 @@ ul {
     color: var(--main-bg-color)
 }
 
-
-/****** Media queries ******/
-
-/* Tablets */
 
 
 /* Mobile */
