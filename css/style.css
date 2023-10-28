@@ -150,7 +150,6 @@ form.search-bar {
 
 form.search-bar .location {
   background-color: var(--main-bg-color);
-  padding: 2px 15px;
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
   border: 1px solid transparent;
